@@ -1,0 +1,16 @@
+hidden = ["node_modules", "**/.git", "**/.cache", "**/dist"]
+entrypoint = "index.html"
+
+[[systems]]
+name = "Node.js"
+language = "nodejs"
+version = "20"
+
+[env]
+NODE_ENV = "development"
+PORT = "5173"
+VITE_API_BASE = ""
+
+run = ["bash", "-lc", "npm install --silent && npm run server & npm run dev"]
+
+
